@@ -1,1 +1,1 @@
-To vist the site go to https://lprts.onrender.com/
+To check the site go to https://lprts.onrender.com/
