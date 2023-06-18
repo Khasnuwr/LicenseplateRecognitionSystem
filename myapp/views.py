@@ -38,7 +38,6 @@ import tempfile
 
 
 def get_vin(frame):
-
     # Defining dictionary to translate bangla numbers to english number
     dic = {
         '০': '0',
@@ -52,11 +51,8 @@ def get_vin(frame):
         '৮': '8',
         '৯': '9'
     }
-
-    
     # Converting the Image frame from colored to Gray 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
     # Preprocess the image to highlight the text regions
     gray = cv2.medianBlur(gray, 5)
     gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
