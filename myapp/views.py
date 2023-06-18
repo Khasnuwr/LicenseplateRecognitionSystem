@@ -54,7 +54,7 @@ def get_vin(frame):
     }
 
     
-
+    # Converting the Image frame from colored to Gray 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # Preprocess the image to highlight the text regions
