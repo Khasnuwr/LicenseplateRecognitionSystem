@@ -21,11 +21,14 @@
 					    <label for="file" style="cursor: pointer;">Upload Image</label>
 					  </p>
 					  <p>
-					    <img id="output" width="200" />
+					    <img id="output" width="300" />
 					  </p>
-					  <input class="btn btn-success" type="submit" value="Check Licence Plate">
+					  <input class="btn btn-success" type="submit" value="Check License Plate">
 					</form>
 					<hr>
+					{% if cropped_plate %}
+						<img width="300" src="data:image/jpeg;base64,{{ cropped_plate }}" alt="Cropped License Plate">
+					{% endif %}
 					<p>Scanned VIN: {{vin}}</p>
 					{% if vin and vehicle is None %}
 						<p>No Vehicle found having this VIN: {{vin}}</p>
